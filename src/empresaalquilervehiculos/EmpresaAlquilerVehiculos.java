@@ -15,4 +15,15 @@ public class EmpresaAlquilerVehiculos {
     private String cif;
     private String nombre;
     private String paginaWeb;
+
+    private int totalClientes;
+    private Cliente[] clientes;
+
+    private int totalVehiculos;
+    private Vehiculo[] vehiculos;
+
+    private int totalAlquileres;
+    private VehiculoAlquilado[] alquileres;
+
 }
+

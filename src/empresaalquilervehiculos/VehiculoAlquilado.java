@@ -11,7 +11,5 @@ package empresaalquilervehiculos;
  */
 public class VehiculoAlquilado {
     
-    private int totalAlquileres;
-    private VehiculoAlquilado[] alquileres;
     
 }

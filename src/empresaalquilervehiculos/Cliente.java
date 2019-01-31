@@ -11,6 +11,4 @@ package empresaalquilervehiculos;
  */
 public class Cliente {
     
-    private int totalClientes;
-    private Cliente[] clientes;
 }
