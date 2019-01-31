@@ -25,5 +25,20 @@ public class EmpresaAlquilerVehiculos {
     private int totalAlquileres;
     private VehiculoAlquilado[] alquileres;
 
-}
+    EmpresaAlquilerVehiculos(String cif, String nombre, String paginaWeb) {
+        this.cif = cif;
+        this.nombre = nombre;
+        this.paginaWeb = paginaWeb;
+// Incialmente no hay clientes creados en la empresa
+        this.totalClientes = 0;
+        this.clientes = new Cliente[50]; // apuntan a null
+// Incialmente no hay vehiculos creados en la empresa
+        this.totalVehiculos = 0;
+        this.vehiculos = new Vehiculo[50]; // apuntan a null
+// Incialmente no hay histórico de alquileres en la empresa
+        this.totalAlquileres = 0;
+        this.alquileres = new VehiculoAlquilado[100]; // apuntan a null
+    }
 
+   
+}
