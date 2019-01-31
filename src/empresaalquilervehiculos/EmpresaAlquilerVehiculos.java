@@ -40,5 +40,8 @@ public class EmpresaAlquilerVehiculos {
         this.alquileres = new VehiculoAlquilado[100]; // apuntan a null
     }
 
-   
+    public void registrarCliente(Cliente nuevo) {
+        this.clientes[this.totalClientes] = nuevo;
+        this.totalClientes++;
+    }
 }
