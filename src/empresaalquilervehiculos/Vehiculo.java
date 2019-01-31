@@ -11,4 +11,11 @@ package empresaalquilervehiculos;
  */
 public class Vehiculo {
     
+    private String matricula;
+    private String marca;
+    private String modelo;
+    private String color;
+    private double tarifa;
+    private boolean disponible;
+
 }

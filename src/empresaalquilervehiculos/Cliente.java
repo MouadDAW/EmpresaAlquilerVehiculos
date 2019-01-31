@@ -11,4 +11,9 @@ package empresaalquilervehiculos;
  */
 public class Cliente {
     
+private String nif;
+private String nombre;
+private String apellidos;
 }
+    
+

@@ -10,6 +10,12 @@ package empresaalquilervehiculos;
  * @author mouad
  */
 public class VehiculoAlquilado {
-    
+
+    private Cliente cliente;
+    private Vehiculo vehiculo;
+    private int diaAlquiler;
+    private int mesAlquiler;
+    private int añoAlquiler;
+    private int totalDiasAlquiler;
     
 }
