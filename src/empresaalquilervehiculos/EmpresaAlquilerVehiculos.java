@@ -63,5 +63,9 @@ public class EmpresaAlquilerVehiculos {
         for (int i = 0; i < this.totalVehiculos; i++) {
             System.out.println(vehiculos[i].getAtributos());
         }
+    
+        alquilarVehiculo(String matricula,String nif,int dias);
+        getCliente(String nif)
+        getVehiculo(Stringmatricula)
     }
 }
