@@ -18,4 +18,8 @@ public class Vehiculo {
     private double tarifa;
     private boolean disponible;
 
+    boolean getAtributos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

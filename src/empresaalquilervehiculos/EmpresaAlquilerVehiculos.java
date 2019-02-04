@@ -44,4 +44,24 @@ public class EmpresaAlquilerVehiculos {
         this.clientes[this.totalClientes] = nuevo;
         this.totalClientes++;
     }
+
+    public void registrarVehiculo(Vehiculo nuevo) {
+
+        this.vehiculos[this.totalVehiculos] = nuevo;
+        this.totalVehiculos++;
+    }
+
+    public void imprimirClientes() {
+        System.out.println("NIF cliente\tNombre\n");
+        for (int i = 0; i < this.totalClientes; i++) {
+            System.out.println(clientes[i].getAtributos());
+        }
+    }
+
+    public void imprimirVehiculos() {
+        System.out.println("Matricula\tModelo\tColor\tImporte\tDisponible\n");
+        for (int i = 0; i < this.totalVehiculos; i++) {
+            System.out.println(vehiculos[i].getAtributos());
+        }
+    }
 }
