@@ -76,4 +76,13 @@ public class EmpresaAlquilerVehiculos {
         }
         return null;
     }
+    
+    private Vehiculo getVehiculo(String matricula) {
+        for (int i = 0; i < this.totalVehiculos; i++) {
+            if (this.vehiculos[i].getMatricula().equals(matricula)) {
+                return this.vehiculos[i];
+            }
+        }
+        return null;
+    }
 }
