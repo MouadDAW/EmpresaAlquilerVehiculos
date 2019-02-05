@@ -195,4 +195,15 @@ public class EmpresaAlquilerVehiculos {
             this.totalAlquileres++;
         }
     }
+    
+    public void recibirVehiculo(String matricula) {
+// busca el vehículo con la matrícula dada en el
+// array vehiculos y modifica su disponibilidad
+// para que se pueda alquilar de nuevo
+        Vehiculo vehiculo = getVehiculo(matricula);
+        if (vehiculo != null) {
+            vehiculo.setDisponible(true);
+        }
+
+}
 }
