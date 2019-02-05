@@ -47,7 +47,7 @@ private String apellidos;
 
     @Override
     public String toString() {
-        return "Cliente{" + "nif=" + nif + ", nombre=" + nombre + ", apellidos=" + apellidos + '}';
+        return "{" + " " + nif + " " + nombre + " " + apellidos + '}';
     }
 
     

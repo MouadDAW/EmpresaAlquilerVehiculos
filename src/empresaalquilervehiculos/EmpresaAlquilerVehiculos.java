@@ -5,6 +5,9 @@
  */
 package empresaalquilervehiculos;
 
+import java.time.LocalDate;
+import static java.time.temporal.TemporalQueries.localDate;
+
 /**
  *
  * @author mouad
@@ -196,6 +199,20 @@ public class EmpresaAlquilerVehiculos {
         }
     }
     
+    public static int diaHoy(){
+        return LocalDate.now().getDayOfMonth();
+    }
+    
+    
+    public static int mesHoy(){
+        return LocalDate.now().getDayOfMonth();
+    }
+    
+    
+    public static int añoHoy(){
+        return LocalDate.now().getDayOfMonth();
+    }
+    
     public void recibirVehiculo(String matricula) {
 // busca el vehículo con la matrícula dada en el
 // array vehiculos y modifica su disponibilidad
@@ -221,7 +238,7 @@ public class EmpresaAlquilerVehiculos {
 
 // registro de los vehículos de la empresa
             easydrive.registrarVehiculo(new Vehiculo("4060 TUR", "Skoda",
-                    "Fabia", "Blanco", 90.0, false));
+                    "Fabia", "Blanco", 90.0, true));
 
             easydrive.registrarVehiculo(new Vehiculo("4070 DEP", "Ford", "Mustang",
                     "Rojo", 150.0, true));
@@ -229,10 +246,10 @@ public class EmpresaAlquilerVehiculos {
             easydrive.registrarVehiculo(new Vehiculo("4080 TUR", "VW", "GTI",
                     
 
-            "Azul", 110.0, false));
+            "Azul", 110.0, true));
 
 easydrive.registrarVehiculo(new Vehiculo("4090 TUR", "SEAT", "Ibiza",
-                    "Blanco", 90.0, false));
+                    "Blanco", 90.0, true));
 
             easydrive.registrarVehiculo(new Vehiculo("4100 FUR", "Fiat", "Ducato",
                     "Azul", 80.0, true));
@@ -242,5 +259,5 @@ easydrive.registrarVehiculo(new Vehiculo("4090 TUR", "SEAT", "Ibiza",
             easydrive.imprimirVehiculos();
         }
     }
-}
+
 
