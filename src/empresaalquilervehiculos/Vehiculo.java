@@ -75,6 +75,11 @@ public class Vehiculo {
         this.disponible = disponible;
     }
 
+    @Override
+    public String toString() {
+        return "Vehiculo{" + "matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color + ", tarifa=" + tarifa + ", disponible=" + disponible + '}';
+    }
+
     
     
 

@@ -5,6 +5,8 @@
  */
 package empresaalquilervehiculos;
 
+import java.time.Month;
+
 /**
  *
  * @author mouad
@@ -14,11 +16,11 @@ public class VehiculoAlquilado {
     private Cliente cliente;
     private Vehiculo vehiculo;
     private int diaAlquiler;
-    private int mesAlquiler;
+    private Month mesAlquiler;
     private int añoAlquiler;
     private int totalDiasAlquiler;
 
-    public VehiculoAlquilado(Cliente cliente, Vehiculo vehiculo, int diaAlquiler, int mesAlquiler, int añoAlquiler, int totalDiasAlquiler) {
+    public VehiculoAlquilado(Cliente cliente, Vehiculo vehiculo, int diaAlquiler, Month mesAlquiler, int añoAlquiler, int totalDiasAlquiler) {
         this.cliente = cliente;
         this.vehiculo = vehiculo;
         this.diaAlquiler = diaAlquiler;
@@ -51,11 +53,11 @@ public class VehiculoAlquilado {
         this.diaAlquiler = diaAlquiler;
     }
 
-    public int getMesAlquiler() {
+    public Month getMesAlquiler() {
         return mesAlquiler;
     }
 
-    public void setMesAlquiler(int mesAlquiler) {
+    public void setMesAlquiler(Month mesAlquiler) {
         this.mesAlquiler = mesAlquiler;
     }
 
@@ -74,6 +76,12 @@ public class VehiculoAlquilado {
     public void setTotalDiasAlquiler(int totalDiasAlquiler) {
         this.totalDiasAlquiler = totalDiasAlquiler;
     }
+
+    @Override
+    public String toString() {
+        return "VehiculoAlquilado{" + "cliente=" + cliente + ", vehiculo=" + vehiculo + ", diaAlquiler=" + diaAlquiler + ", mesAlquiler=" + mesAlquiler + ", a\u00f1oAlquiler=" + añoAlquiler + ", totalDiasAlquiler=" + totalDiasAlquiler + '}';
+    }
+    
     
     
 }

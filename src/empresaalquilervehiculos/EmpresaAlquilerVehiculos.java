@@ -40,6 +40,97 @@ public class EmpresaAlquilerVehiculos {
         this.alquileres = new VehiculoAlquilado[100]; // apuntan a null
     }
 
+    public EmpresaAlquilerVehiculos(String cif, String nombre, String paginaWeb, int totalClientes, Cliente[] clientes, int totalVehiculos, Vehiculo[] vehiculos, int totalAlquileres, VehiculoAlquilado[] alquileres) {
+        this.cif = cif;
+        this.nombre = nombre;
+        this.paginaWeb = paginaWeb;
+        this.totalClientes = totalClientes;
+        this.clientes = clientes;
+        this.totalVehiculos = totalVehiculos;
+        this.vehiculos = vehiculos;
+        this.totalAlquileres = totalAlquileres;
+        this.alquileres = alquileres;
+    }
+
+    public String getCif() {
+        return cif;
+    }
+
+    public void setCif(String cif) {
+        this.cif = cif;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getPaginaWeb() {
+        return paginaWeb;
+    }
+
+    public void setPaginaWeb(String paginaWeb) {
+        this.paginaWeb = paginaWeb;
+    }
+
+    public int getTotalClientes() {
+        return totalClientes;
+    }
+
+    public void setTotalClientes(int totalClientes) {
+        this.totalClientes = totalClientes;
+    }
+
+    public Cliente[] getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(Cliente[] clientes) {
+        this.clientes = clientes;
+    }
+
+    public int getTotalVehiculos() {
+        return totalVehiculos;
+    }
+
+    public void setTotalVehiculos(int totalVehiculos) {
+        this.totalVehiculos = totalVehiculos;
+    }
+
+    public Vehiculo[] getVehiculos() {
+        return vehiculos;
+    }
+
+    public void setVehiculos(Vehiculo[] vehiculos) {
+        this.vehiculos = vehiculos;
+    }
+
+    public int getTotalAlquileres() {
+        return totalAlquileres;
+    }
+
+    public void setTotalAlquileres(int totalAlquileres) {
+        this.totalAlquileres = totalAlquileres;
+    }
+
+    public VehiculoAlquilado[] getAlquileres() {
+        return alquileres;
+    }
+
+    public void setAlquileres(VehiculoAlquilado[] alquileres) {
+        this.alquileres = alquileres;
+    }
+
+    @Override
+    public String toString() {
+        return "EmpresaAlquilerVehiculos{" + "cif=" + cif + ", nombre=" + nombre + ", paginaWeb=" + paginaWeb + ", totalClientes=" + totalClientes + ", clientes=" + clientes + ", totalVehiculos=" + totalVehiculos + ", vehiculos=" + vehiculos + ", totalAlquileres=" + totalAlquileres + ", alquileres=" + alquileres + '}';
+    }
+    
+    
+
     public void registrarCliente(Cliente nuevo) {
         this.clientes[this.totalClientes] = nuevo;
         this.totalClientes++;
@@ -84,5 +175,24 @@ public class EmpresaAlquilerVehiculos {
             }
         }
         return null;
+    }
+    
+    public void alquilarVehiculo(String matricula, String nif, int dias) {
+        Cliente cliente = getCliente(nif);
+        Vehiculo vehiculo = getVehiculo(matricula);
+// busca el cliente con el NIF dado en el array
+// clientes y el vehículo con la matrícula dada en el
+// array vehiculos, si el vehículo está disponible se
+// alquila con la fecha actual, que se obtiene
+// ejecutando los métodos diaHoy(), mesHoy() y
+// añoHoy(), cuya declaración no se incluye
+        if (vehiculo.isDisponible()) {
+            vehiculo.setDisponible(false);
+            this.alquileres[this.totalAlquileres]
+                    = new VehiculoAlquilado(cliente, vehiculo,
+                            diaHoy(), mesHoy(), añoHoy(), dias);
+
+            this.totalAlquileres++;
+        }
     }
 }

@@ -45,6 +45,11 @@ private String apellidos;
         this.apellidos = apellidos;
     }
 
+    @Override
+    public String toString() {
+        return "Cliente{" + "nif=" + nif + ", nombre=" + nombre + ", apellidos=" + apellidos + '}';
+    }
+
     
     }
 
