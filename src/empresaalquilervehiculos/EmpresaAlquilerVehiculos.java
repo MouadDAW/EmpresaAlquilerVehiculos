@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import static java.time.temporal.TemporalQueries.localDate;
 
 /**
- *
+ * Faltan métodos solicitados en clase
  * @author mouad
  */
 public class EmpresaAlquilerVehiculos {
